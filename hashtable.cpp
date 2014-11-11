@@ -49,6 +49,7 @@ void HashTable::checkFull(){
     for(int i=0; i<population; ++i){
       insert(oldTable[i]); //put all old values into the new table
     }
+    delete[] oldTable;
     resizing = false;
   }
 }
